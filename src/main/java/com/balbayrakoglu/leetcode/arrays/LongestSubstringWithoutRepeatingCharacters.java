@@ -1,7 +1,6 @@
 package com.balbayrakoglu.leetcode.arrays;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class LongestSubstringWithoutRepeatingCharacters {
 
@@ -31,7 +30,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 maxLength = currentWindowLength;
             }
         }
-
         return maxLength;
     }
 }
