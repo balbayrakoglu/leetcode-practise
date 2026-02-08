@@ -16,9 +16,7 @@ public class GroupAnagram {
             char[] chars = str.toCharArray();
             Arrays.sort(chars);
             String key = new String(chars);
-            if (!sortedMap.containsKey(key)) {
-               sortedMap.put(key,new ArrayList<>());
-            }
+            sortedMap.computeIfAbsent(key, k -> new ArrayList<>());
             sortedMap.get(key).add(str);
         }
 
