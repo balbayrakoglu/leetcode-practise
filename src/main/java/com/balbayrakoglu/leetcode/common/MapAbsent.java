@@ -1,9 +1,11 @@
 package com.balbayrakoglu.leetcode.common;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class MapAbsent {
 
@@ -53,5 +55,39 @@ public class MapAbsent {
 
         System.out.println(counter); // {apple=3}
 
+
+        ConcurrentHashMap<String, Integer> concurrentMap = new ConcurrentHashMap<>();
+        concurrentMap.putIfAbsent("key1", 1); // key1 does not exist, so it will be added
+        concurrentMap.computeIfAbsent("key2", k -> 2); // key2 does not exist, so the value is computed as 2
+        concurrentMap.computeIfPresent("key1", (k, v) -> v + 1); // key1 exists, so its value will be updated to 2
+        System.out.println("ConcurrentHashMap: " + concurrentMap); // Output: ConcurrentHashMap: {key1=2, key2=2}
+
+        ConcurrentHashMap<String, AtomicInteger> atomicConcurrentMap = new ConcurrentHashMap<>();
+        atomicConcurrentMap.computeIfAbsent("counter", k -> new AtomicInteger(0)).incrementAndGet(); // counter does not exist, so it will be created and incremented to 1
+        atomicConcurrentMap.computeIfAbsent("counter", k -> new AtomicInteger(0)).incrementAndGet(); // counter already exists, so it will be incremented to 2
+        System.out.println("AtomicConcurrentMap: " + atomicConcurrentMap.get("counter").get()); // Output: AtomicConcurrentMap: 2
+
+
+         var map = Map.of("a", 1, "b", 2);
+        //    map.put("c", 3);   UnsupportedOperationException at runtime
+
+        var list = List.of(1,2,3);
+        list.stream()
+                .map(i -> i++)
+                .forEach(System.out::print); // 123
+
+
+
+        HashMap<String, Integer> hashMap = new HashMap<>();
+        hashMap.put("a", 1);
+        hashMap.put("b", 2);
+        hashMap.put("c", 3);
+        hashMap.put(null,4);
+        System.out.println(hashMap); // Output: {null=4, a=1, b=2, c=3}
+        hashMap.put(null,5); // null key can be updated
+        System.out.println(hashMap); // Output: {null=5, a=1, b=2, c=3}
+        hashMap.put("d", null);
     }
+
+
 }
