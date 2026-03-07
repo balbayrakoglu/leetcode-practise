@@ -34,6 +34,7 @@ public class TreeSetVsHashSet {
         treeSet.add("A");
         treeSet.add("B");
         treeSet.add("A"); // Duplicate element, will not be added
+
         try {
             treeSet.add(null); // This will throw NullPointerException
         } catch (NullPointerException e) {
