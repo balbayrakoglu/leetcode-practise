@@ -4,6 +4,15 @@ import java.util.Locale;
 
 public class Palindrome {
 
+    /*
+     Problem: Valid Palindrome
+     Given a string `s`, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+     Example:
+     Input: "A man, a plan, a canal: Panama"
+     Output: true
+    */
+
     public boolean isPalindrome(String s) {
         if (s == null) {
             return false;

@@ -1,6 +1,15 @@
 package com.balbayrakoglu.leetcode.arrays;
 
 public class ValidSudoku {
+    /*
+     Problem: Valid Sudoku
+     Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be validated
+     according to Sudoku rules: each row, column, and 3x3 sub-box must contain the digits 1-9 without repetition.
+
+     Example:
+     Input: a partially filled 9x9 board
+     Output: true/false depending on validity
+    */
     public boolean isValidSudoku(char[][] board) {
         if (board == null || board.length != 9 || board[0].length != 9) {
             throw new IllegalArgumentException("Board must be 9x9");

@@ -1,9 +1,14 @@
 package com.balbayrakoglu.leetcode.strings;
 
-import java.util.Locale;
-import java.util.Stack;
-
 public class ReverseVowelsOfaString {
+    /*
+     Problem: Reverse Vowels of a String
+     Given a string `s`, reverse only the vowels of the string and return it.
+
+     Example:
+     Input: s = "hello"
+     Output: "holle"
+    */
 
     public String reverseVowels(String s) {
         if (s == null || s.length() <= 1) {

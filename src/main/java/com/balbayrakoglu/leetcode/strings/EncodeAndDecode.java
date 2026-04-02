@@ -1,10 +1,18 @@
 package com.balbayrakoglu.leetcode.strings;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class EncodeAndDecode {
+    /*
+     Problem: Encode and Decode Strings
+     Design an algorithm to encode a list of strings to a single string and decode it back to the original list.
+
+     Example:
+     Input: ["hello","world"]
+     Encoded: "5#hello5#world"
+     Decoded: ["hello","world"]
+    */
 
     public String encode(List<String> strs) {
         StringBuilder result = new StringBuilder();

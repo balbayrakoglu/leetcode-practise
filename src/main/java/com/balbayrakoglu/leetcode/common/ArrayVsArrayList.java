@@ -4,6 +4,15 @@ import java.util.ArrayList;
 
 public class ArrayVsArrayList {
 
+    /*
+     Purpose: Illustrate differences between primitive arrays and ArrayList in Java.
+     Shows fixed-size behavior of arrays vs. dynamic resizing of ArrayList.
+
+     Example:
+     int[] array = new int[5]; // fixed size
+     ArrayList<Integer> arrayList = new ArrayList<>(); // dynamic
+    */
+
     public static void main(String[] args) {
         int[] array = new int[5];
         array[0] = 1;

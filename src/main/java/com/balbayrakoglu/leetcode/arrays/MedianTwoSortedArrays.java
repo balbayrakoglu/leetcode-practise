@@ -3,6 +3,14 @@ package com.balbayrakoglu.leetcode.arrays;
 import java.util.Arrays;
 
 public class MedianTwoSortedArrays {
+    /*
+     Problem: Median of Two Sorted Arrays
+     Given two sorted arrays `nums1` and `nums2` of size m and n respectively, return the median of the two sorted arrays.
+
+     Example:
+     Input: nums1 = [1,3], nums2 = [2]
+     Output: 2.0
+    */
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int n = nums1.length;

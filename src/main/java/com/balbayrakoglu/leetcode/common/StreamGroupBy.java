@@ -7,6 +7,14 @@ import java.util.stream.Collectors;
 
 public class StreamGroupBy {
 
+    /*
+     Purpose: Demonstrate grouping with Java Streams
+     Shows how to group a list of objects by a property using Collectors.groupingBy.
+
+     Example:
+     List<PersonForImmutable> people = ...; Map<Integer, List<PersonForImmutable>> grouped = people.stream().collect(Collectors.groupingBy(PersonForImmutable::getAge));
+    */
+
     public static void main(String[] args)  {
         // Example of grouping a list of people by their age
         List<PersonForImmutable> people = Arrays.asList(

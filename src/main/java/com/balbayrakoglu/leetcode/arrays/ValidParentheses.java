@@ -2,9 +2,17 @@ package com.balbayrakoglu.leetcode.arrays;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Stack;
 
 public class ValidParentheses {
+    /*
+     Problem: Valid Parentheses
+     Given a string `s` containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+     An input string is valid if open brackets are closed by the same type of brackets and in the correct order.
+
+     Example:
+     Input: s = "()[]{}"
+     Output: true
+    */
 
     public boolean isValid(String s) {
         if (s == null || s.length() < 2) {

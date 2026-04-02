@@ -3,6 +3,13 @@ package com.balbayrakoglu.leetcode.common;
 import java.util.Objects;
 
 public class PersonForImmutable {
+    /*
+     Purpose: Simple mutable Person class used in examples demonstrating immutability and stream operations.
+
+     Example:
+     PersonForImmutable p = new PersonForImmutable("Alice", 30);
+     p.getName(); // "Alice"
+    */
 
     private String name;
     private int age;

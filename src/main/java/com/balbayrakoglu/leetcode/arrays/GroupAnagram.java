@@ -3,6 +3,14 @@ package com.balbayrakoglu.leetcode.arrays;
 import java.util.*;
 
 public class GroupAnagram {
+    /*
+     Problem: Group Anagrams
+     Given an array of strings `strs`, group the anagrams together. You can return the answer in any order.
+
+     Example:
+     Input: strs = ["eat","tea","tan","ate","nat","bat"]
+     Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
+    */
 
     public List<List<String>> groupAnagrams(String[] strs) {
 

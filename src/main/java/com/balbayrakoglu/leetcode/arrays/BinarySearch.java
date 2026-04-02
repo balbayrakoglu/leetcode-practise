@@ -1,6 +1,14 @@
 package com.balbayrakoglu.leetcode.arrays;
 
 public class BinarySearch {
+    /*
+     Problem: Binary Search
+     Given a sorted (ascending) integer array `arr` and a `target` value, return the index of `target` if it exists in the array, otherwise return -1.
+
+     Example:
+     Input: arr = [-1,0,3,5,9,12], target = 9
+     Output: 4
+    */
 
     public int search(int[] arr, int target) {
         if (arr == null || arr.length == 0) {

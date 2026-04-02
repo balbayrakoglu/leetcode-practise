@@ -1,19 +1,28 @@
 package com.balbayrakoglu.leetcode.strings;
 
 public class LongestCommonPrefix {
+    /*
+     Problem: Longest Common Prefix
+     Write a function to find the longest common prefix string amongst an array of strings.
+     If there is no common prefix, return an empty string "".
+
+     Example:
+     Input: strs = ["flower","flow","flight"]
+     Output: "fl"
+    */
 
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {
             return "";
         }
         String prefix = strs[0];
-        System.out.println(prefix);
+
         for (int i = 0; i < strs.length; i++) {
             String current = strs[i];
-            System.out.println("current " + current + " " + i);
+
             while (!current.startsWith(prefix)) {
                 prefix = prefix.substring(0, prefix.length() - 1);
-                System.out.println(prefix);
+
                 if (prefix.isEmpty()) {
                     return "";
                 }

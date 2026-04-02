@@ -4,6 +4,14 @@ import java.util.List;
 import java.util.Objects;
 
 public final class ImmutableClass {
+    /*
+     Purpose: Example of an immutable class in Java.
+     Demonstrates defensive copying and returning copies to preserve immutability of internal state.
+
+     Example:
+     ImmutableClass ic = new ImmutableClass(1, new PersonForImmutable("Alice",30), List.of("a","b"));
+     ic.getItems(); // returns an unmodifiable copy
+    */
 
     private final int value;
 

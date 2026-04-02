@@ -1,8 +1,17 @@
 package com.balbayrakoglu.leetcode.arrays;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LongestSubstringWithoutRepeatingCharacters {
+    /*
+     Problem: Longest Substring Without Repeating Characters
+     Given a string `s`, find the length of the longest substring without repeating characters.
+
+     Example:
+     Input: s = "abcabcbb"
+     Output: 3  (the answer is "abc")
+    */
 
     public int lengthOfLongestSubstring(String s) {
         if (s == null) {

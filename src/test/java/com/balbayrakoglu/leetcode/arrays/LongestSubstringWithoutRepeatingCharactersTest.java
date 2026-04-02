@@ -2,14 +2,16 @@ package com.balbayrakoglu.leetcode.arrays;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LongestSubstringWithoutRepeatingCharactersTest {
 
     @Test
     void lengthOfLongestSubstring() {
         LongestSubstringWithoutRepeatingCharacters ls = new LongestSubstringWithoutRepeatingCharacters();
-        assertEquals(3, ls.lengthOfLongestSubstring("thisisalongx"));
+        assertEquals(3, ls.lengthOfLongestSubstring("abcabcbb"));
+
+        //assertEquals(8, ls.lengthOfLongestSubstring("thisisalongx"));
 
     }
 }

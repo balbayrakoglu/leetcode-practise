@@ -1,6 +1,15 @@
 package com.balbayrakoglu.leetcode.strings;
 
 public class ReverseWordsInAString {
+    /*
+     Problem: Reverse Words in a String
+     Given an input string `s`, reverse the order of the words. A word is defined as a sequence of non-space characters.
+     The output should not contain leading or trailing spaces, and words should be separated by a single space.
+
+     Example:
+     Input: s = "  the sky  is  blue  "
+     Output: "blue is sky the"
+    */
     public String reverseWord(String s) {
         if (s.isEmpty()) {
             return "";

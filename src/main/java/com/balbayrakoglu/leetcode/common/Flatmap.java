@@ -5,6 +5,14 @@ import java.util.List;
 
 public class Flatmap {
 
+    /*
+     Purpose: Demonstrate flatMap usage in Java Streams
+     Shows how to flatten nested collections/arrays into a single stream and perform operations on the flattened stream.
+
+     Example:
+     String[][] arrayOfArrays = {{"a","b"},{"c","d"}}; Arrays.stream(arrayOfArrays).flatMap(Arrays::stream).forEach(System.out::print);
+    */
+
     public static void main(String[] args) {
         String[][] arrayOfArrays = {{"a", "b"}, {"c", "d"}, {"e", "f"}};
 

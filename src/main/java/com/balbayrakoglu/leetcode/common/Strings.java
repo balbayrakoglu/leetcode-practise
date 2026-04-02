@@ -1,6 +1,14 @@
 package com.balbayrakoglu.leetcode.common;
 
 public class Strings {
+    /*
+     Purpose: Demonstrate String pool and string equality semantics in Java.
+     Shows differences between string literals, runtime concatenation, and new String() instances.
+
+     Example:
+     String s1 = "Java"; String s2 = "Ja" + "va"; // s1 == s2 is true
+     String s3 = new String("Java"); // s1 == s3 is false, but s1.equals(s3) is true
+    */
     public void stringPool() {
         String s1 = "Java";
         String s2 = "Ja" + "va";
