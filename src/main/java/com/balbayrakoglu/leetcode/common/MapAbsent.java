@@ -1,5 +1,7 @@
 package com.balbayrakoglu.leetcode.common;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,7 +26,6 @@ public class MapAbsent {
         map2.computeIfAbsent("key2", k -> 2); // key2 does not exist, so the value is computed as 2
         map2.computeIfAbsent("key1", k -> 3); // key1 already exists, so the value is not recomputed
         System.out.println("Using computeIfAbsent(): " + map2); // Output: {key1=1, key2=2}
-
 
         Map<String, List<String>> map3 = new HashMap<>();
         String key = "fruits";
@@ -68,25 +69,35 @@ public class MapAbsent {
         System.out.println("AtomicConcurrentMap: " + atomicConcurrentMap.get("counter").get()); // Output: AtomicConcurrentMap: 2
 
 
-         var map = Map.of("a", 1, "b", 2);
+        var map = Map.of("a", 1, "b", 2);
         //    map.put("c", 3);   UnsupportedOperationException at runtime
 
-        var list = List.of(1,2,3);
+        var list = List.of(1, 2, 3);
         list.stream()
                 .map(i -> i++)
                 .forEach(System.out::print); // 123
-
 
 
         HashMap<String, Integer> hashMap = new HashMap<>();
         hashMap.put("a", 1);
         hashMap.put("b", 2);
         hashMap.put("c", 3);
-        hashMap.put(null,4);
+        hashMap.put(null, 4);
         System.out.println(hashMap); // Output: {null=4, a=1, b=2, c=3}
-        hashMap.put(null,5); // null key can be updated
+        hashMap.put(null, 5); // null key can be updated
         System.out.println(hashMap); // Output: {null=5, a=1, b=2, c=3}
         hashMap.put("d", null);
+
+
+        ConcurrentHashMap<String, CacheRate> cache = new ConcurrentHashMap<>();
+        CacheRate cacheRate = cache.compute("key", (s, existing) -> {
+                    if (existing.rate() != null) {
+                        return existing;
+                    }
+                    return new CacheRate(new BigDecimal(1), LocalDateTime.now());
+                }
+        );
+        System.out.println(cacheRate.localDateTime() + " " + cacheRate.rate());
     }
 
 
