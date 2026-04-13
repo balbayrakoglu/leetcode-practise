@@ -15,18 +15,18 @@ public class StreamGroupBy {
      List<PersonForImmutable> people = ...; Map<Integer, List<PersonForImmutable>> grouped = people.stream().collect(Collectors.groupingBy(PersonForImmutable::getAge));
     */
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         // Example of grouping a list of people by their age
         List<PersonForImmutable> people = Arrays.asList(
-            new PersonForImmutable("Alice", 30),
-            new PersonForImmutable("Bob", 25),
-            new PersonForImmutable("Charlie", 30),
-            new PersonForImmutable("David", 25)
+                new PersonForImmutable("Alice", 30),
+                new PersonForImmutable("Bob", 25),
+                new PersonForImmutable("Charlie", 30),
+                new PersonForImmutable("David", 25)
         );
 
         Map<Integer, List<PersonForImmutable>> groupedByAge = people.stream()
-            .collect(Collectors.groupingBy(PersonForImmutable::getAge));
-
+                .collect(Collectors.groupingBy(PersonForImmutable::getAge));
+ 
         System.out.println(groupedByAge);
     }
 }
