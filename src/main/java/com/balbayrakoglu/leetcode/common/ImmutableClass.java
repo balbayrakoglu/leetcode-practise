@@ -17,24 +17,42 @@ public final class ImmutableClass {
 
     private final PersonForImmutable personForImmutable;
 
+    private final List<PersonForImmutable> listPersonForImmutable;
+
     private final List<String> items;
 
-    public ImmutableClass(int value, PersonForImmutable personForImmutable, List<String> items) {
+    public ImmutableClass(int value, PersonForImmutable personForImmutable, List<String> items, List<PersonForImmutable> listPersonForImmutable) {
+
+        Objects.requireNonNull(personForImmutable, "personForImmutable must not be null");
+        Objects.requireNonNull(items, "items must not be null");
+        Objects.requireNonNull(listPersonForImmutable, "listPersonForImmutable must not be null");
+
         this.value = value;
-        this.personForImmutable = new PersonForImmutable(Objects.requireNonNull(
-                personForImmutable.getName()), personForImmutable.getAge());
+
         this.items = List.copyOf(items);
+
+        this.personForImmutable = new PersonForImmutable(personForImmutable.getName(), personForImmutable.getAge());
+
+        this.listPersonForImmutable = listPersonForImmutable.stream().map(PersonForImmutable::new).toList();
+
     }
 
     public int getValue() {
         return value;
     }
 
-    public PersonForImmutable getPerson(){
+    public PersonForImmutable getPerson() {
         return new PersonForImmutable(personForImmutable.getName(), personForImmutable.getAge());
     }
 
     public List<String> getItems() {
         return List.copyOf(items);
     }
+
+    public List<PersonForImmutable> getListPersonForImmutable() {
+        return listPersonForImmutable.stream()
+                .map(PersonForImmutable::new)
+                .toList();
+    }
 }
+

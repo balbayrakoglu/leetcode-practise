@@ -19,6 +19,11 @@ public class PersonForImmutable {
         this.age = age;
     }
 
+    public PersonForImmutable(PersonForImmutable other) {
+        this.age = other.getAge();
+        this.name = other.getName();
+    }
+
     public String getName() {
         return name;
     }

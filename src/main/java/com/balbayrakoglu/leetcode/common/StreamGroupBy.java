@@ -26,7 +26,42 @@ public class StreamGroupBy {
 
         Map<Integer, List<PersonForImmutable>> groupedByAge = people.stream()
                 .collect(Collectors.groupingBy(PersonForImmutable::getAge));
- 
+
         System.out.println(groupedByAge);
+
+        List<PersonForImmutable> findThirtyYearsOld = people.stream().filter(personForImmutable -> personForImmutable.getAge() == 30).toList();
+
+        System.out.println(findThirtyYearsOld);
+
+        List<String> names = people.stream().map(PersonForImmutable::getName).toList();
+
+        System.out.println(names);
+
+        List<String> over25YearsOld = people.stream()
+                .filter(personForImmutable -> personForImmutable.getAge() > 25)
+                .map(PersonForImmutable::getName)
+                .toList();
+
+        for (PersonForImmutable person : people) {
+            if (person.getAge() > 25) {
+                System.out.println(person.getName() + "list.add(person.getName())");
+            }
+        }
+
+        System.out.println(over25YearsOld);
+
+        boolean isBob = people.stream().anyMatch(personForImmutable -> personForImmutable.getName().equalsIgnoreCase("bob"));
+        for (PersonForImmutable person : people) {
+            if (person.getName().equalsIgnoreCase("bob")) {
+                System.out.println("true");
+                break;
+            }
+        }
+
+        System.out.println(isBob);
+
+        int sumAge = people.stream().mapToInt(PersonForImmutable::getAge).sum();
+
+        System.out.println(sumAge);
     }
 }
