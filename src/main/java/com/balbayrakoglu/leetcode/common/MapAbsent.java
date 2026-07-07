@@ -73,9 +73,7 @@ public class MapAbsent {
         //    map.put("c", 3);   UnsupportedOperationException at runtime
 
         var list = List.of(1, 2, 3);
-        list.stream()
-                .map(i -> i++)
-                .forEach(System.out::print); // 123
+        list.stream().map(i -> i++).forEach(System.out::print); // 123
 
 
         HashMap<String, Integer> hashMap = new HashMap<>();
@@ -90,14 +88,26 @@ public class MapAbsent {
 
 
         ConcurrentHashMap<String, CacheRate> cache = new ConcurrentHashMap<>();
+        cache.put("key", new CacheRate(new BigDecimal(0), LocalDateTime.now()));
         CacheRate cacheRate = cache.compute("key", (s, existing) -> {
-                    if (existing.rate() != null) {
-                        return existing;
-                    }
-                    return new CacheRate(new BigDecimal(1), LocalDateTime.now());
-                }
-        );
+            if (existing.rate() != null) {
+                return existing;
+            }
+            return new CacheRate(new BigDecimal(1), LocalDateTime.now());
+        });
         System.out.println(cacheRate.localDateTime() + " " + cacheRate.rate());
+
+
+        Map<Character, Integer> putExampleDefault = new HashMap<>();
+        putExampleDefault.put('a', 1);
+        putExampleDefault.put('b', 1);
+        putExampleDefault.put('c', 2);
+        System.out.println(putExampleDefault);
+        putExampleDefault.put('c', putExampleDefault.getOrDefault('c', 0) + 1);
+        System.out.println(putExampleDefault);
+
+
+        putExampleDefault.getOrDefault('c', putExampleDefault.get('c') + 1);
     }
 
 

@@ -21,11 +21,17 @@ public class StreamGroupBy {
                 new PersonForImmutable("Alice", 30),
                 new PersonForImmutable("Bob", 25),
                 new PersonForImmutable("Charlie", 30),
-                new PersonForImmutable("David", 25)
+                new PersonForImmutable("David", 25),
+                new PersonForImmutable("David", 22),
+                new PersonForImmutable("David", 21)
         );
 
         Map<Integer, List<PersonForImmutable>> groupedByAge = people.stream()
                 .collect(Collectors.groupingBy(PersonForImmutable::getAge));
+
+        Map<String, List<PersonForImmutable>> groupByName = people.stream().collect(Collectors.groupingBy(PersonForImmutable::getName));
+ 
+        System.out.println(groupByName);
 
         System.out.println(groupedByAge);
 
@@ -63,5 +69,7 @@ public class StreamGroupBy {
         int sumAge = people.stream().mapToInt(PersonForImmutable::getAge).sum();
 
         System.out.println(sumAge);
+
+
     }
 }

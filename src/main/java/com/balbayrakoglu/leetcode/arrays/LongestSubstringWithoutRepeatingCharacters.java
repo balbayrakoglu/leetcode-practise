@@ -14,31 +14,21 @@ public class LongestSubstringWithoutRepeatingCharacters {
     */
 
     public int lengthOfLongestSubstring(String s) {
-        if (s == null) {
-            return 0;
-        }
-
-        Map<Character, Integer> charToLastIndex = new HashMap<>();
         int left = 0;
-        int maxLength = 0;
+        int max = 0;
+        Map<Character, Integer> lastIndex = new HashMap<>();
 
         for (int right = 0; right < s.length(); right++) {
-            char currentChar = s.charAt(right);
+            char c = s.charAt(right);
 
-            if (charToLastIndex.containsKey(currentChar)) {
-                int lastIndex = charToLastIndex.get(currentChar);
-                if (lastIndex >= left) {
-                    left = lastIndex + 1;
-                }
+            if (lastIndex.containsKey(c) && lastIndex.get(c) >= left) {
+                left = lastIndex.get(c) + 1;
             }
 
-            charToLastIndex.put(currentChar, right);
-
-            int currentWindowLength = right - left + 1;
-            if (currentWindowLength > maxLength) {
-                maxLength = currentWindowLength;
-            }
+            lastIndex.put(c, right);
+            max = Math.max(max, right - left + 1);
         }
-        return maxLength;
+
+        return max;
     }
 }
