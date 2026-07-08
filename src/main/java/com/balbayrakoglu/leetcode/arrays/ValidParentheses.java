@@ -12,6 +12,14 @@ public class ValidParentheses {
      Example:
      Input: s = "()[]{}"
      Output: true
+
+     Yaklasim (Pattern: Stack):
+     - Acilis parantezlerini stack'e at; kapanis geldiginde tepedekiyle eslesmeli, yoksa false.
+     - Sonda stack bos olmali (acik kalan parantez yok).
+     - Stack neden dogru arac: en son acilan parantez en once kapanmali (LIFO).
+
+     Karmasiklik: Zaman O(n) | Alan O(n)
+     LeetCode: #20 Valid Parentheses (Easy) - https://leetcode.com/problems/valid-parentheses/
     */
 
     public boolean isValid(String s) {

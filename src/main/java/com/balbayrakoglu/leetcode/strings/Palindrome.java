@@ -11,6 +11,14 @@ public class Palindrome {
      Example:
      Input: "A man, a plan, a canal: Panama"
      Output: true
+
+     Yaklasim (Pattern: Two Pointers - iki uctan):
+     - String'i kucuk harfe cevirip alfanumerik olmayanlari temizle.
+     - left bastan, right sondan ilerler; her adimda karakterler esit olmali.
+     - Iyilestirme: temizleme yapmadan, isaretcilerle gecersiz karakterleri atlayarak O(1) ek alan da mumkun.
+
+     Karmasiklik: Zaman O(n) | Alan O(n) (temizlenmis kopya)
+     LeetCode: #125 Valid Palindrome (Easy) - https://leetcode.com/problems/valid-palindrome/
     */
 
     public boolean isPalindrome(String s) {

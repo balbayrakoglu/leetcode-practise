@@ -12,6 +12,13 @@ public class KidsWithTheGreatestNumberOfCandies {
      Example:
      Input: candies = [2,3,5,1,3], extraCandies = 3
      Output: [true,true,true,false,true]
+
+     Yaklasim (Pattern: Iki gecis):
+     - 1. gecis: dizideki maksimumu bul.
+     - 2. gecis: her cocuk icin candies[i] + extraCandies >= max kontrolu yap.
+
+     Karmasiklik: Zaman O(n) | Alan O(n) (sonuc listesi)
+     LeetCode: #1431 Kids With the Greatest Number of Candies (Easy) - https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
     */
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         if (candies == null || candies.length == 0) {

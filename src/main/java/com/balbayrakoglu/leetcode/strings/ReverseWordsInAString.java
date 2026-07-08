@@ -9,6 +9,14 @@ public class ReverseWordsInAString {
      Example:
      Input: s = "  the sky  is  blue  "
      Output: "blue is sky the"
+
+     Yaklasim (Iki cozum iceriyor):
+     - reverseWord: trim + split("\\s+") ile kelimelere ayirip sondan basa birlestir (kisa ve okunakli).
+     - reverseWords: split kullanmadan sondan basa manuel tarama - kelime sinirlarini
+       isaretcilerle bulur; regex/ek dizi maliyeti olmadan ayni isi yapar (mulakatta tercih edilen).
+
+     Karmasiklik: Zaman O(n) | Alan O(n) (sonuc)
+     LeetCode: #151 Reverse Words in a String (Medium) - https://leetcode.com/problems/reverse-words-in-a-string/
     */
     public String reverseWord(String s) {
         if (s.isEmpty()) {

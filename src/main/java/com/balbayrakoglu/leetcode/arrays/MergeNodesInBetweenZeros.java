@@ -1,6 +1,23 @@
 package com.balbayrakoglu.leetcode.arrays;
 
 public class MergeNodesInBetweenZeros {
+    /*
+     Problem: Merge Nodes in Between Zeros
+     0 ile baslayip 0 ile biten bagli listede, iki 0 arasindaki dugumlerin toplamini
+     tek dugum yapip 0'lari kaldirarak yeni listeyi dondur.
+
+     Ornek:
+     Input: head = [0,3,1,0,4,5,2,0]
+     Output: [4,11]
+
+     Yaklasim (Pattern: Linked List - tek gecis + toplam biriktirme):
+     - Ilk 0'i atla; 0 gorene kadar degerleri topla, 0 gorunce toplami yeni dugum olarak sonuca ekle.
+     - Dummy (sahte) bas dugum kullanmak, sonuc listesinin basini yonetmeyi kolaylastirir.
+
+     Karmasiklik: Zaman O(n) | Alan O(1) (sonuc listesi haric)
+     LeetCode: #2181 Merge Nodes in Between Zeros (Medium) - https://leetcode.com/problems/merge-nodes-in-between-zeros/
+    */
+
 
     public static class ListNode {
         int val;

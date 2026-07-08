@@ -6,6 +6,24 @@ import java.util.Comparator;
 import java.util.List;
 
 public class MergeIntervals {
+    /*
+     Problem: Merge Intervals
+     Verilen araliklar dizisinde cakisan araliklari birlestir ve sonucu dondur.
+
+     Ornek:
+     Input: intervals = [[1,3],[2,6],[8,10],[15,18]]
+     Output: [[1,6],[8,10],[15,18]]
+
+     Yaklasim (Pattern: Siralama + tek gecis birlestirme):
+     - Araliklari baslangic degerine gore sirala.
+     - current araligin bitisi >= sonrakinin baslangici ise cakisiyorlar -> bitisleri max ile birlestir.
+     - Cakismiyorsa sonraki aralik yeni current olur ve listeye eklenir.
+     - Not: bu dosyadaki metot birlesmis araliklarin sadece bitis degerlerini int[] olarak dondurur.
+
+     Karmasiklik: Zaman O(n log n) | Alan O(n)
+     LeetCode: #56 Merge Intervals (Medium) - https://leetcode.com/problems/merge-intervals/
+    */
+
 
     public static int[] merge(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparingInt(o -> o[0]));

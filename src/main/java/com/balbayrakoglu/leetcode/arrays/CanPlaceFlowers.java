@@ -9,6 +9,14 @@ public class CanPlaceFlowers {
      Example:
      Input: flowerbed = [1,0,0,0,1], n = 1
      Output: true
+
+     Yaklasim (Pattern: Greedy - tek gecis):
+     - Her bos hucre icin sol ve sag komsusuna bak (dizi sinirlari bos sayilir).
+     - Uc kosul da bos ise cicegi hemen dik (greedy), sayaci azalt; n sifira ulasirsa true.
+     - Neden greedy dogru: bir cicegi mumkun olan en erken yere dikmek sonraki secenekleri asla azaltmaz.
+
+     Karmasiklik: Zaman O(n) | Alan O(1)
+     LeetCode: #605 Can Place Flowers (Easy) - https://leetcode.com/problems/can-place-flowers/
     */
 
     public boolean canPlaceFlowers(int[] flowerbed, int n) {

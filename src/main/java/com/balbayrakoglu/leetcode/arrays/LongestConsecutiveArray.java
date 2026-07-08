@@ -12,6 +12,14 @@ public class LongestConsecutiveArray {
      Example:
      Input: nums = [100,4,200,1,3,2]
      Output: 4  (sequence: [1,2,3,4])
+
+     Yaklasim (Pattern: Hash Set + dizi baslangici tespiti):
+     - Tum sayilari set'e at. Sadece "dizi baslangici" olan sayilardan (num-1 set'te yoksa) ileri dogru say.
+     - Boylece her eleman en fazla bir dizinin parcasi olarak bir kez gezilir -> toplam O(n).
+     - Siralama cozumu O(n log n) olurdu; soru O(n) istedigi icin set kullanilir.
+
+     Karmasiklik: Zaman O(n) | Alan O(n)
+     LeetCode: #128 Longest Consecutive Sequence (Medium) - https://leetcode.com/problems/longest-consecutive-sequence/
     */
     public int longestConsecutive(int[] nums) {
         if (nums.length == 0) {

@@ -11,6 +11,13 @@ public class ContainsDuplicate {
      Example:
      Input: nums = [1,2,3,1]
      Output: true
+
+     Yaklasim (Pattern: Hash Set):
+     - Elemanlari gezerken her birini set'e ekle; ekleme oncesi zaten varsa duplicate bulundu.
+     - Alternatifler: siralayip komsulari karsilastir O(n log n) / O(1), brute force O(n^2).
+
+     Karmasiklik: Zaman O(n) | Alan O(n)
+     LeetCode: #217 Contains Duplicate (Easy) - https://leetcode.com/problems/contains-duplicate/
     */
 
     public boolean hasDuplicate(int[] nums) {

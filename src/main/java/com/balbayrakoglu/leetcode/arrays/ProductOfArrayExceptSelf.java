@@ -9,6 +9,14 @@ public class ProductOfArrayExceptSelf {
      Example:
      Input: nums = [1,2,3,4]
      Output: [24,12,8,6]
+
+     Yaklasim (Pattern: Prefix / Suffix carpimlari):
+     - 1. gecis (soldan): ans[i] = i'nin solundaki tum elemanlarin carpimi.
+     - 2. gecis (sagdan): ans[i] *= i'nin sagindaki tum elemanlarin carpimi (right degiskeniyle tasinir).
+     - Boylece bolme kullanmadan her indeks icin sol_carpim * sag_carpim elde edilir.
+
+     Karmasiklik: Zaman O(n) | Alan O(1) (cikti dizisi haric)
+     LeetCode: #238 Product of Array Except Self (Medium) - https://leetcode.com/problems/product-of-array-except-self/
     */
     public int[] productExceptSelf(int[] nums) {
         int[] ans = new int[nums.length];

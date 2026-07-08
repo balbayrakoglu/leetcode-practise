@@ -12,6 +12,14 @@ public class TwoSum {
      Example:
      Input: nums = [2,7,11,15], target = 9
      Output: [0,1]
+
+     Yaklasim (Pattern: Hash Map - tek gecis):
+     - Diziyi soldan saga gez; her eleman icin complement = target - nums[i] hesapla.
+     - complement daha once map'e eklendiyse cevap bulundu demektir; yoksa nums[i]'yi indeksiyle map'e koy.
+     - Neden calisir: dogru cift (a, b) icin b'ye geldigimizde a zaten map'tedir.
+
+     Karmasiklik: Zaman O(n) | Alan O(n)
+     LeetCode: #1 Two Sum (Easy) - https://leetcode.com/problems/two-sum/
     */
 
     public int[] twoSum(int[] nums, int target) {

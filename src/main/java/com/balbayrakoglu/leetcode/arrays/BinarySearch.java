@@ -8,6 +8,14 @@ public class BinarySearch {
      Example:
      Input: arr = [-1,0,3,5,9,12], target = 9
      Output: 4
+
+     Yaklasim (Pattern: Binary Search):
+     - Sirali dizide arama uzayini her adimda yariya indir: mid'e bak, target kucukse sola, buyukse saga daral.
+     - Dikkat: mid = left + (right - left) / 2 yazimi (left + right) / 2'nin int tasmasini onler.
+     - Dongu kosulu left <= right; esitlik kacarsa tek elemanli aralik kontrol edilmez.
+
+     Karmasiklik: Zaman O(log n) | Alan O(1)
+     LeetCode: #704 Binary Search (Easy) - https://leetcode.com/problems/binary-search/
     */
 
     public int search(int[] arr, int target) {

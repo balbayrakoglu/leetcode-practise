@@ -12,6 +12,15 @@ public class EncodeAndDecode {
      Input: ["hello","world"]
      Encoded: "5#hello5#world"
      Decoded: ["hello","world"]
+
+     Yaklasim (Pattern: Uzunluk on-eki ile kodlama):
+     - Her string'in basina "uzunluk + '#'" ekle: ["ab","c"] -> "2#ab1#c".
+     - Decode ederken once '#'e kadar sayiyi oku, sonra tam o kadar karakteri al.
+     - Neden ayirac tek basina yetmez: string'in kendisi ayirac karakteri icerebilir;
+       uzunluk bilgisi bunu belirsizlikten kurtarir.
+
+     Karmasiklik: Zaman O(toplam karakter) | Alan O(toplam karakter)
+     LeetCode: #271 Encode and Decode Strings (Medium) - https://leetcode.com/problems/encode-and-decode-strings/
     */
 
     public String encode(List<String> strs) {

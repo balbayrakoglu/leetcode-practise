@@ -8,6 +8,14 @@ public class ReverseVowelsOfaString {
      Example:
      Input: s = "hello"
      Output: "holle"
+
+     Yaklasim (Pattern: Two Pointers - iki uctan):
+     - left ve right sesli harf bulana kadar iceri ilerler; ikisi de sesli bulunca swap yapilir.
+     - Sessiz harfler yerinde kalir, sadece sesliler ayna gorevi gorur.
+     - Dosyanin altinda alternatif stack cozumu de yorum olarak mevcut (iki gecisli).
+
+     Karmasiklik: Zaman O(n) | Alan O(n) (char dizisi kopyasi)
+     LeetCode: #345 Reverse Vowels of a String (Easy) - https://leetcode.com/problems/reverse-vowels-of-a-string/
     */
 
     public String reverseVowels(String s) {

@@ -11,6 +11,14 @@ public class LongestSubstringWithoutRepeatingCharacters {
      Example:
      Input: s = "abcabcbb"
      Output: 3  (the answer is "abc")
+
+     Yaklasim (Pattern: Sliding Window + Hash Map):
+     - [left, right] penceresi tekrarsiz karakterleri temsil eder; right her adimda ilerler.
+     - Yeni karakter pencere icinde daha once gorulduyse left'i "son gorulen indeks + 1"e zipla.
+     - Map her karakterin son indeksini tutar; boylece left geriye gitmez.
+
+     Karmasiklik: Zaman O(n) | Alan O(min(n, alfabe))
+     LeetCode: #3 Longest Substring Without Repeating Characters (Medium) - https://leetcode.com/problems/longest-substring-without-repeating-characters/
     */
 
     public int lengthOfLongestSubstring(String s) {

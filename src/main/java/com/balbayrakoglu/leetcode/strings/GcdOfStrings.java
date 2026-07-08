@@ -8,6 +8,13 @@ public class GcdOfStrings {
      Example:
      Input: str1 = "ABCABC", str2 = "ABC"
      Output: "ABC"
+
+     Yaklasim (Pattern: Matematik - Oklid algoritmasi):
+     - Kritik gozlem: ortak bir "bolen string" varsa str1+str2 == str2+str1 olmak zorundadir.
+     - Bu saglaniyorsa cevap, uzunluklarin EBOB'u kadar olan on-ektir; EBOB Oklid ile bulunur.
+
+     Karmasiklik: Zaman O(m+n) | Alan O(m+n) (birlesim karsilastirmasi)
+     LeetCode: #1071 Greatest Common Divisor of Strings (Easy) - https://leetcode.com/problems/greatest-common-divisor-of-strings/
     */
     public String gcdOfString(String str1, String str2){
         if(!(str1 + str2).equals(str2 + str1)) {

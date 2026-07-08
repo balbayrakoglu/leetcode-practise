@@ -9,6 +9,14 @@ public class LongestCommonPrefix {
      Example:
      Input: strs = ["flower","flow","flight"]
      Output: "fl"
+
+     Yaklasim (Iki cozum iceriyor):
+     - longestCommonPrefix: yatay tarama - prefix'i ilk kelime kabul et, uymayan her kelimede sondan kirp.
+     - LongestCommonPrefixIndex: dikey tarama - karakter karakter ilerle, ilk uyusmazlikta o ana kadarki on-eki dondur.
+     - Dikey tarama, kisa bir kelime erken uyusmazlik verdiginde daha az is yapar.
+
+     Karmasiklik: Zaman O(S) (S: tum karakterlerin toplami) | Alan O(1)
+     LeetCode: #14 Longest Common Prefix (Easy) - https://leetcode.com/problems/longest-common-prefix/
     */
 
     public String longestCommonPrefix(String[] strs) {

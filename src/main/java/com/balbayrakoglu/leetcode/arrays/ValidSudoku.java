@@ -9,6 +9,14 @@ public class ValidSudoku {
      Example:
      Input: a partially filled 9x9 board
      Output: true/false depending on validity
+
+     Yaklasim (Pattern: Hash / boolean isaretleme - tek gecis):
+     - Her satir, sutun ve 3x3 kutu icin "bu rakam kullanildi mi" bilgisini boolean tablolarda tut.
+     - Kutu indeksi formulu: (row / 3) * 3 + (col / 3) -> 0..8 arasi 9 kutu.
+     - Ayni rakam ayni satir/sutun/kutuda ikinci kez gorulurse tahta gecersizdir.
+
+     Karmasiklik: Zaman O(81) = O(1) | Alan O(1) (sabit 9x10 tablolar)
+     LeetCode: #36 Valid Sudoku (Medium) - https://leetcode.com/problems/valid-sudoku/
     */
     public boolean isValidSudoku(char[][] board) {
         if (board == null || board.length != 9 || board[0].length != 9) {

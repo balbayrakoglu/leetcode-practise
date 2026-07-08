@@ -17,8 +17,8 @@ public class Flatmap {
         String[][] arrayOfArrays = {{"a", "b"}, {"c", "d"}, {"e", "f"}};
 
         // Using flatMap to flatten the array of arrays into a single stream
-        String result = java.util.Arrays.stream(arrayOfArrays)
-                .flatMap(java.util.Arrays::stream) // Flatten the inner arrays
+        String result = Arrays.stream(arrayOfArrays)
+                .flatMap(Arrays::stream) // Flatten the inner arrays
                 .reduce("", (acc, str) -> acc + str); // Concatenate the strings
 
         System.out.println(result); // Output: "abcdef"

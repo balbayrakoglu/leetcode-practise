@@ -9,6 +9,14 @@ public class MissingNumber {
      Example:
      Input: nums = [3,0,1]
      Output: 2
+
+     Yaklasim (Pattern: Matematik - Gauss toplami):
+     - 0..n araliginin beklenen toplami n*(n+1)/2; dizinin gercek toplamini cikarinca eksik sayi kalir.
+     - Tasma riskine karsi beklenen toplam long ile hesaplanir.
+     - Alternatif: XOR hilesi (a^a=0) ile de O(1) alanda cozulur.
+
+     Karmasiklik: Zaman O(n) | Alan O(1)
+     LeetCode: #268 Missing Number (Easy) - https://leetcode.com/problems/missing-number/
     */
 
     public int missingNumber(int[] nums) {

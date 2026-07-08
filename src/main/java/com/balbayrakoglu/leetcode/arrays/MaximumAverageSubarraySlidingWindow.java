@@ -8,6 +8,14 @@ public class MaximumAverageSubarraySlidingWindow {
      Example:
      Input: nums = [1,12,-5,-6,50,3], k = 4
      Output: 12.75
+
+     Yaklasim (Pattern: Sabit boyutlu Sliding Window):
+     - Ilk k elemanin toplamini hesapla; sonra pencereyi kaydirirken yeni elemani ekle, cikan elemani cikar.
+     - Boylece her adimda toplami yeniden hesaplamak (O(k)) yerine O(1) guncelleme yapilir.
+     - Maks toplami tut; ortalama = maxSum / k (bolme en sonda -> hassasiyet korunur).
+
+     Karmasiklik: Zaman O(n) | Alan O(1)
+     LeetCode: #643 Maximum Average Subarray I (Easy) - https://leetcode.com/problems/maximum-average-subarray-i/
     */
 
     public static double findMaxAverage(int[] nums, int k) {

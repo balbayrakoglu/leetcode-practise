@@ -4,6 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FizzBuzz {
+    /*
+     Problem: Fizz Buzz
+     1'den 100'e kadar sayilari yazdir; 3'e bolunenlerde "Fizz", 5'e bolunenlerde "Buzz",
+     ikisine de bolunenlerde "FizzBuzz" yazdir.
+
+     Yaklasim (Kural map'i ile genisletilebilir tasarim):
+     - Bolen -> kelime eslesmeleri bir Map'te tutulur; yeni kural (orn. 7 -> "Jazz") tek satirla eklenir.
+     - Her sayi icin eslesen kelimeler StringBuilder'da birlestirilir; hicbiri eslesmezse sayinin kendisi yazilir.
+     - Klasik if/else zincirine gore daha esnek bir cozumdur (Open/Closed prensibi).
+
+     Karmasiklik: Zaman O(n * k) (k: kural sayisi) | Alan O(k)
+     LeetCode: #412 Fizz Buzz (Easy) - https://leetcode.com/problems/fizz-buzz/
+    */
+
 
     public static void fizzBuzz() {
         Map<Integer, String> rules = new HashMap<>();

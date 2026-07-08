@@ -13,6 +13,13 @@ public class TopKFrequentElement {
      Example:
      Input: nums = [1,1,1,2,2,3], k = 2
      Output: [1,2]
+
+     Yaklasim (Bu dosyadaki cozum: frekans map'i + siralama):
+     - Once her sayinin frekansini map'te say, sonra girisleri frekansa gore azalan sirala ve ilk k'yi al.
+     - Alternatifler: min-heap ile O(n log k), bucket sort ile O(n) (frekanslar 1..n araliginda oldugu icin).
+
+     Karmasiklik: Zaman O(n log n) | Alan O(n)
+     LeetCode: #347 Top K Frequent Elements (Medium) - https://leetcode.com/problems/top-k-frequent-elements/
     */
 
     public int[] topKFrequent(int[] nums, int k) {

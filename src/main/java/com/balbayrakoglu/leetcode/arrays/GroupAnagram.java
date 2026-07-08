@@ -10,6 +10,14 @@ public class GroupAnagram {
      Example:
      Input: strs = ["eat","tea","tan","ate","nat","bat"]
      Output: [["eat","tea","ate"],["tan","nat"],["bat"]]
+
+     Yaklasim (Pattern: Hash Map + kanonik anahtar):
+     - Her kelimenin harflerini siralayarak "kanonik form" uret (ornegin eat -> aet).
+     - Ayni kanonik forma sahip kelimeler anagramdir; map'te ayni anahtarin listesine eklenir.
+     - Iyilestirme: siralama yerine 26'lik harf sayaci anahtar yapilirsa O(n*k) olur.
+
+     Karmasiklik: Zaman O(n * k log k) (k: en uzun kelime) | Alan O(n * k)
+     LeetCode: #49 Group Anagrams (Medium) - https://leetcode.com/problems/group-anagrams/
     */
 
     public List<List<String>> groupAnagrams(String[] strs) {

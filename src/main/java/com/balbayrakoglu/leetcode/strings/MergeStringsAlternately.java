@@ -9,6 +9,14 @@ public class MergeStringsAlternately {
      Example:
      Input: word1 = "abc", word2 = "pqr"
      Output: "apbqcr"
+
+     Yaklasim (Pattern: Two Pointers - paralel ilerleme):
+     - i ve j isaretcileriyle iki string'den sirayla birer karakter ekle.
+     - Biri biterse digerinin kalanini eklemeye devam et (while kosulu || oldugu icin otomatik).
+     - StringBuilder kullanimi, dongude String birlestirmenin O(n^2) maliyetini onler.
+
+     Karmasiklik: Zaman O(n+m) | Alan O(n+m)
+     LeetCode: #1768 Merge Strings Alternately (Easy) - https://leetcode.com/problems/merge-strings-alternately/
     */
     public String mergeAlternately(String word1, String word2) {
         if (word1 == null || word2 == null) {
