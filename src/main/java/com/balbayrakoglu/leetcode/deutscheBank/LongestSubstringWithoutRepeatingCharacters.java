@@ -23,7 +23,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
                     left = lastIndex + 1;
                 }
             }
-
+ 
             charToLastIndex.put(currentChar, right);
 
             int currentWindowLength = right - left + 1;
